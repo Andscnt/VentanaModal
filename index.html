@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MODAL</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src='https://kit.fontawesome.com/2ee0245f3d.js' crossorigin='anonymous'></script>
+
+</head>
+<body>
+    <header>
+        <figure>
+            <img src="imagenes/logo.jpg" alt="">
+        </figure>
+    </header>
+    <section class="contInfo ancho">
+        <article class="info">
+            <h4>Our Team</h4>
+            <h1>A Dedicated Team <br>of Experts</h1><br>
+            <p class="fuerte">Passion, experinece and fierce commitment to education are the cornestones of our sucess in the beauty industry</p><br>
+            <p>We believe that being the largest SPA in the area is not enough in itself to satisfy the needs of our customers. For this reason we have built up a staff of specialized professionals who are proud to welcome ypu to our hotel, present What We Do, listen to your needs and guarantee well-being and relaxation during yoyr stay at our SPA Resort.</p><br>
+            <p>Everyone in our team is a certified specialist capable of delivering a unique service of high quality you won't find anywhere else in modem spa and resort industry.</p><br>
+            <div class="btns">
+                <a class="btnrosa" href="#">LEARN MORE</a>
+                <a class="btnblanco" href="#">VIEW ALL TEAM</a>
+            </div>
+        </article>
+
+        <aside class="contacto" id="boton">
+            <article class="personas">
+                <figure>
+                    <img src="imagenes/foto1.jpg" alt="#">
+                </figure><br>
+                <h2>Jessica Cooper</h2>
+                <p>Esthetician</p><br>
+                <div class="redes">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-pinterest"></i>
+                </div><br>
+                <a id="Btn" class="btnrosa" href="#">GET IN TOUCH</a>
+            </article>
+            <article class="personas">
+                <figure>
+                    <img src="imagenes/foto2.jpg" alt="#">
+                </figure><br>
+                <h2>Robert Wagner</h2>
+                <p>Hairdresser</p><br>
+                <div class="redes">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-google"></i>
+                </div><br>
+                <a id="Btn1" class="btnrosa" href="#">GET IN TOUCH</a>
+            </article>
+        </aside>
+    </section>
+
+    <!--MODAL-->
+    <section id="modal" class="fondomodal">
+        <div class="contenidomodal">
+            <h3>Contact Us</h3>
+            <i id="cerrarbtn" class="cerrarmodal fas fa-times-circle"></i>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut nostrum porro obcaecati? Fuga, cupiditate recusandae?
+          </p>
+          <form action="#">
+            <input type="text" id="name"  class="formulario" placeholder="Name*" required><br>
+            <input type="email" id="email"  class="formulario"   placeholder="E-mail*" required><br>
+            <input type="text" id="Message" class="formulario1"  placeholder="Message*" required><br> <br>
+            <button type="submit" class="btnrosa">SUBMIT</button>
+          </form>
+        </div>
+      </section>
+
+    <footer>
+    </footer>
+
+      <!-- FUNCIONES JAVASCRIPT -->
+  <script>
+    var fondomodal = document.getElementById("modal");
+    var btn = document.getElementById("Btn");
+    var btn1 = document.getElementById("Btn1");
+    var cerrar = document.getElementById("cerrarbtn");
+
+    function tiempo() {
+      fondomodal.style.display = "block";
+    }
+    setTimeout(tiempo, 5000);
+
+    btn.onclick = function () {
+      fondomodal.style.display = "block";
+    };
+    btn1.onclick = function () {
+      fondomodal.style.display = "block";
+    };
+    cerrar.onclick = function () {
+      fondomodal.style.display = "none";
+    };
+    window.onclick = function (event) {
+      if (event.target == fondomodal) {
+        fondomodal.style.display = "none";
+      }
+    };
+  </script>
+</body>
+</html>
